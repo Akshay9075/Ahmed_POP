@@ -9954,3 +9954,21 @@ h3 {
     border-radius: 16px;
   }
 }
+/* Contact blocks responsive fix: allow icon+text to wrap/shrink on small screens */
+@media (max-width: 767px) {
+  .container-fluid .d-inline-flex {
+    display: flex !important;
+    align-items: center;
+  }
+
+  .container-fluid .d-inline-flex .d-flex.flex-column {
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+
+  .container-fluid .d-inline-flex p {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    margin: 0;
+  }
+}
